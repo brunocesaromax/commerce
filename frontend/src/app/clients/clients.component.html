@@ -1,0 +1,61 @@
+<form class="text-center border border-light p-5">
+
+    <p class="h4 mb-4">Client registration</p>
+
+    <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" [(ngModel)]="client.name" name="name" placeholder="Name" />
+    </div>
+    <div class="form-group">
+        <label for="email">E-mail:</label>
+        <input type="email" [(ngModel)]="client.email" name="email" placeholder="E-mail" />
+    </div>
+    <div class="form-group">
+        <label for="dateBirth">Date of Birth:</label>
+        <input type="date" [(ngModel)]="client.dateBirth" name="dateBirth" />
+    </div>
+    <button type="submit" style="width: 100px;" class="btn btn-success" (click)="save()">Save</button>
+    <button type="submit" style="width: 100px;" class="btn btn-danger" (click)="cancel()">Cancel</button>
+
+</form>
+
+<div *ngIf="msgError" class="alert alert-danger">
+    {{msgError}}
+</div>
+
+<div *ngIf="msgSuccess" class="alert alert-success">
+    {{msgSuccess}}
+</div>
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">id</th>
+            <th scope="col">Name</th>
+            <th scope="col">E-mail</th>
+            <th scope="col">Date of Birth</th>
+            <th scope="col">Update</th>
+            <th scope="col">Delete</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let client of clients">
+            <td>{{client.id}}</td>
+            <td>{{ client.name }}</td>
+            <td>{{ client.email }}</td>
+            <td>{{ client.dateBirth }}</td>
+            <td>
+                <a href="javascript:void(0)" (click)="update(client)">
+                    <img src="../../assets/img/editar.png" alt="Update" title="Update" width="20px" height="20px" />
+                </a>
+            </td>
+            <td>
+                <a href="javascript:void(0)" (click)="delete(client)">
+                    <img src="../../assets/img/excluir.png" alt="Delete" title="Delete" width="20px" height="20px" />
+                </a>
+            </td>
+        </tr>
+    </tbody>
+
+</table>
