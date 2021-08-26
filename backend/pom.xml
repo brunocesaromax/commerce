@@ -11,7 +11,7 @@
     <groupId>com.ciliaassessmentproject</groupId>
     <artifactId>commerce</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
     <name>commerce</name>
     <description>Small project simulator sales of products for customers using spring boot.</description>
 
