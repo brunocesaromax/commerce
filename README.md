@@ -3,8 +3,6 @@
 
 # Sobre o projeto
 
-https://commerce-ui-app.herokuapp.com/
-
 Commerce é uma aplicação full stack web que consiste na simulação de vendas de produtos para clientes.   
 O projeto foi construído durante a fase de implementação de um processo seletivo que participei.
 
